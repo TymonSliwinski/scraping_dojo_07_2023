@@ -51,11 +51,11 @@ class Scraper():
         if use_proxy:
             options.add_argument(f'--proxy-server={proxy_server}')
         
-        # driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()),
-        #                           options=options)
+        driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()),
+                                  options=options)
 
         # for local testing if you have chromedriver.exe in root directory
-        driver = webdriver.Chrome(service=Service('./chromedriver.exe'), options=options)
+        # driver = webdriver.Chrome(service=Service('./chromedriver.exe'), options=options)
 
         return driver
 
